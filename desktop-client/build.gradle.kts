@@ -78,5 +78,7 @@ tasks.withType<JavaExec>().configureEach {
         javaLauncher = javaToolchains.launcherFor {
             languageVersion = JavaLanguageVersion.of(jdkToolchainVersion)
         }
+
+        dependsOn(":server:startServerInBackground")
     }
 }
